@@ -409,7 +409,7 @@ locateButton.startup();
    //var SrOutline =    new AGDMSL("http://www2.graniteschools.org/enterprise/rest/services/AllBoundaryOutlines/MapServer/0", {"visible": false});
    //var SrOutline =    new FeatureLayer("http://www2.graniteschools.org/enterprise/rest/services/AllBoundaryOutlines/FeatureServer/0", {"visible": false});
 
-   var SrPoly =    new AGDMSL("http://www2.graniteschools.org/enterprise/rest/services/All_Boundaries/MapServer/0", {"visible": false});
+   var SrPoly =    new AGDMSL("http://www2.graniteschools.org/enterprise/rest/services/SchoolBoundaries__19_20/MapServer/2", {"visible": false});
 
    //elemSite.setInfoTemplates({0: {infoTemplate: SiteTemplate}});
     //Bus Services
