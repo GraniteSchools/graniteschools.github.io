@@ -393,23 +393,23 @@ locateButton.startup();
     //var elemSite = new AGDMSL("http://www2.graniteschools.org/arcgis/rest/services/ElemSitePlans/MapServer", {"opacity":.5});
 
     //Junior High Package
-    var JrPoly =    new FeatureLayer("https://services7.arcgis.com/jv9LxT1Je6SeWSAz/ArcGIS/rest/services/Current_Boundaries/FeatureServer/1?token=kY0W4e8Oo7BTijyYMfkcP81gMf5XKAyOavYmVbR2gIFobbH2A85joJid3qUEL0hm6Zxmf4vNTrjlM3TT_t-hUWiNVUUnyWX83Pj9pkuaSW8ERHPpyvxuNLYHXne-AyxqcW_odN5OJ9_wXsNxPf0QdSxN8NJKDwFeZLrXxdY4AwLci_L800DYqKW_CbwEw9V10GbeFBMs4zrNrKMpUQ5MoSFt3AROYKaoqdWi3u6WJzbz3u-NK5FJAeGOtZj1tx1k", {
-      "opacity":.4,
-      "visible": false,
-      });
-    //var JrPoly =    new FeatureLayer("http://www2.graniteschools.org/enterprise/rest/services/SchoolBoundaries__19_20/MapServer/1", {"opacity":.5,"visible": false,});
+   // var JrPoly =    new FeatureLayer("https://services7.arcgis.com/jv9LxT1Je6SeWSAz/ArcGIS/rest/services/Current_Boundaries/FeatureServer/1?token=kY0W4e8Oo7BTijyYMfkcP81gMf5XKAyOavYmVbR2gIFobbH2A85joJid3qUEL0hm6Zxmf4vNTrjlM3TT_t-hUWiNVUUnyWX83Pj9pkuaSW8ERHPpyvxuNLYHXne-AyxqcW_odN5OJ9_wXsNxPf0QdSxN8NJKDwFeZLrXxdY4AwLci_L800DYqKW_CbwEw9V10GbeFBMs4zrNrKMpUQ5MoSFt3AROYKaoqdWi3u6WJzbz3u-NK5FJAeGOtZj1tx1k", {
+  //    "opacity":.4,
+  //    "visible": false,
+   //   });
+    var JrPoly =    new FeatureLayer("http://www2.graniteschools.org/enterprise/rest/services/SchoolBoundaries__19_20/MapServer/1", {"opacity":.5,"visible": false,});
     var JrOutline =    new AGDMSL("http://www2.graniteschools.org/arcgis/rest/services/JrBoundaries_2/MapServer", {"visible": false});
 
     //Senior High Package
-    var SrPoly =    new FeatureLayer("https://services7.arcgis.com/jv9LxT1Je6SeWSAz/ArcGIS/rest/services/Current_Boundaries/FeatureServer/2?token=kY0W4e8Oo7BTijyYMfkcP81gMf5XKAyOavYmVbR2gIFobbH2A85joJid3qUEL0hm6Zxmf4vNTrjlM3TT_t-hUWiNVUUnyWX83Pj9pkuaSW8ERHPpyvxuNLYHXne-AyxqcW_odN5OJ9_wXsNxPf0QdSxN8NJKDwFeZLrXxdY4AwLci_L800DYqKW_CbwEw9V10GbeFBMs4zrNrKMpUQ5MoSFt3AROYKaoqdWi3u6WJzbz3u-NK5FJAeGOtZj1tx1k", {
-      "opacity":.4,
-      "visible": false,
-      });
+  //  var SrPoly =    new FeatureLayer("https://services7.arcgis.com/jv9LxT1Je6SeWSAz/ArcGIS/rest/services/Current_Boundaries/FeatureServer/2?token=kY0W4e8Oo7BTijyYMfkcP81gMf5XKAyOavYmVbR2gIFobbH2A85joJid3qUEL0hm6Zxmf4vNTrjlM3TT_t-hUWiNVUUnyWX83Pj9pkuaSW8ERHPpyvxuNLYHXne-AyxqcW_odN5OJ9_wXsNxPf0QdSxN8NJKDwFeZLrXxdY4AwLci_L800DYqKW_CbwEw9V10GbeFBMs4zrNrKMpUQ5MoSFt3AROYKaoqdWi3u6WJzbz3u-NK5FJAeGOtZj1tx1k", {
+    //  "opacity":.4,
+    //  "visible": false,
+   //   });
    var SrOutline =    new AGDMSL("http://www2.graniteschools.org/arcgis/rest/services/SrBoundaries_2/MapServer", {"visible": false});
    //var SrOutline =    new AGDMSL("http://www2.graniteschools.org/enterprise/rest/services/AllBoundaryOutlines/MapServer/0", {"visible": false});
    //var SrOutline =    new FeatureLayer("http://www2.graniteschools.org/enterprise/rest/services/AllBoundaryOutlines/FeatureServer/0", {"visible": false});
 
-   //var SrPoly =    new AGDMSL("http://www2.graniteschools.org/enterprise/rest/services/All_Boundaries/MapServer/0", {"visible": false});
+   var SrPoly =    new AGDMSL("http://www2.graniteschools.org/enterprise/rest/services/All_Boundaries/MapServer/0", {"visible": false});
 
    //elemSite.setInfoTemplates({0: {infoTemplate: SiteTemplate}});
     //Bus Services
