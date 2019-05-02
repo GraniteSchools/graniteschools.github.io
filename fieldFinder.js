@@ -60,7 +60,10 @@ esri.config.defaults.geometryService = new esri.tasks.GeometryService("http://20
 
 	imgLyr = new WebTiledLayer('https://discover.agrc.utah.gov/login/path/fuel-cola-scoop-canyon/tiles/utah/${level}/${col}/${row}',{minScale: 10000});
     map.addLayer(imgLyr);
-	var rentalLayer = new esri.layers.ArcGISDynamicMapServiceLayer("http://www2.graniteschools.org/ArcGIS/rest/services/ffrentals/MapServer", {"opacity":1.0});
+
+
+	//var rentalLayer = new esri.layers.ArcGISDynamicMapServiceLayer("http://www2.graniteschools.org/ArcGIS/rest/services/ffrentals/MapServer", {"opacity":1.0});
+	var rentalLayer = new esri.layers.ArcGISDynamicMapServiceLayer("http://www2.graniteschools.org/enterprise/rest/services/FieldRentals/MapServer", {"opacity":1.0});
 	map.addLayer(rentalLayer);
 
 	 var measurement = new Measurement({
