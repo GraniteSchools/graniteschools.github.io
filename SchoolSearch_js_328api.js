@@ -214,7 +214,7 @@ require([
             dojo.byId("elResults").innerHTML += "<font size='3'><a href='" + e.features[0].attributes.URL + "'>District Home Page</a><br/>"
         })
     }
-
+    
     function D(e) {
         query = new Query();
         query.outFields = ["Precinct", "ROMAN", "BRD_MEM"];
