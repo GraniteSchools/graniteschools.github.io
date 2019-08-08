@@ -81,23 +81,18 @@ require([
         if (dojo.byId("busButton").checked) {
             if (ElPoly.visible === true) {
                 busElem.setVisibility(true);
-                BS_El.setVisibility(true);
                 busJr.setVisibility(false);
                 busSr.setVisibility(false)
             } else if (JrPoly.visible === true) {
                 busElem.setVisibility(false);
                 busJr.setVisibility(true);
                 busSr.setVisibility(false);
-                BS_El.setVisibility(false);
-                BS_Jr.setVisibility(true);
-                BS_Sr.setVisibility(false)
+
             } else if (SrPoly.visible === true) {
                 busElem.setVisibility(false);
                 busJr.setVisibility(false);
                 busSr.setVisibility(true);
-                BS_El.setVisibility(false);
-                BS_Jr.setVisibility(false);
-                BS_Sr.setVisibility(true)
+
             }
         } else {
             busElem.setVisibility(false);
@@ -114,25 +109,22 @@ require([
         } else {
             if (ElPoly.visible === true) {
                 busElem.setVisibility(true);
-                BS_El.setVisibility(true);
-                BS_El.setVisibility(false);
+
                 busJr.setVisibility(false);
-                busSr.setVisibility(false);
-                BS_Jr.setVisibility(false);
-                BS_Sr.setVisibility(false)
+                busSr.setVisibility(false)
+
             } else if (JrPoly.visible === true) {
                 busElem.setVisibility(false);
                 busJr.setVisibility(true);
-                BS_Jr.setVisibility(true);
-                busSr.setVisibility(false);
-                BS_Sr.setVisibility(false)
+
+                busSr.setVisibility(false)
+
             } else if (SrPoly.visible === true) {
                 busElem.setVisibility(false);
-                BS_El.setVisibility(false);
+
                 busJr.setVisibility(false);
-                BS_Jr.setVisibility(false);
-                busSr.setVisibility(true);
-                BS_Sr.setVisibility(true)
+
+                busSr.setVisibility(true)
 
             }
         }
