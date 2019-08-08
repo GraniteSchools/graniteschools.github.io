@@ -47,44 +47,32 @@ require([
     {
     parser.parse();
     function T() {
-        elemPoly.setVisibility(true);
-        //elemOutline.setVisibility(true);
-        //elempnt.setVisibility(true);
-
+        ElPoly.setVisibility(true);
         JrPoly.setVisibility(false);
-        //JrOutline.setVisibility(false);
         SrPoly.setVisibility(false);
-        SrOutline.setVisibility(false);
-
 
         k()
     }
 
     function N() {
-        elemPoly.setVisibility(false);
-        //elemOutline.setVisibility(false);
-        //elempnt.setVisibility(false);
-        //JrOutline.setVisibility(true);
+        ElPoly.setVisibility(false);
         JrPoly.setVisibility(true);
         SrPoly.setVisibility(false);
-        SrOutline.setVisibility(false);
+
         k()
     }
 
     function C() {
-        elemPoly.setVisibility(false);
-        //elemOutline.setVisibility(false);
-        //elempnt.setVisibility(false);
+        ElPoly.setVisibility(false);
         JrPoly.setVisibility(false);
-        //JrOutline.setVisibility(false);
         SrPoly.setVisibility(true);
-        SrOutline.setVisibility(true);
+
         k()
     }
 
     function k() {
         if (dojo.byId("busButton").checked) {
-            if (elemPoly.visible === true) {
+            if (ElPoly.visible === true) {
                 busElem.setVisibility(true);
                 busJr.setVisibility(false);
                 busSr.setVisibility(false)
@@ -92,7 +80,7 @@ require([
                 busElem.setVisibility(false);
                 busJr.setVisibility(true);
                 busSr.setVisibility(false)
-            } else if (SrOutline.visible === true) {
+            } else if (SrPoly.visible === true) {
                 busElem.setVisibility(false);
                 busJr.setVisibility(false);
                 busSr.setVisibility(true)
@@ -110,7 +98,7 @@ require([
             busJr.setVisibility(false);
             busSr.setVisibility(false)
         } else {
-            if (elemPoly.visible === true) {
+            if (ElPoly.visible === true) {
                 busElem.setVisibility(true);
                 busJr.setVisibility(false);
                 busSr.setVisibility(false)
@@ -118,7 +106,7 @@ require([
                 busElem.setVisibility(false);
                 busJr.setVisibility(true);
                 busSr.setVisibility(false)
-            } else if (SrOutline.visible === true) {
+            } else if (SrPoly.visible === true) {
                 busElem.setVisibility(false);
                 busJr.setVisibility(false);
                 busSr.setVisibility(true)
@@ -299,23 +287,6 @@ require([
             }
         })
     }
-    //parser.parse();
-
-
-
-
-
-// var SiteTemplate = new InfoTemplate();
-// SiteTemplate.setTitle("<b>${School_Name}</b>");
-// SiteTemplate.setContent("<b>Feature:</b>  ${FeatureType}<br>" +
-//                     "<b>Squre Feet:</b>  ${SqFt} sq ft <br>");
-
-
-
-    //
-    // map = new esri.Map("map", {
-    //     logo: false
-    // });
 
 
     map = new esri.Map("map", {
@@ -379,42 +350,15 @@ locateButton.startup();
     //var w = Sr. High
 
     //Elementary Package
-    var elemPoly =    new AGDMSL("http://www2.graniteschools.org/enterprise/rest/services/ElemBounds/MapServer",{"imageParameters" : imageParameters});
-    elemPoly.setInfoTemplates({2: {infoTemplate:template}});
+    var ElPoly =    new AGDMSL("http://www2.graniteschools.org/enterprise/rest/services/ElemBounds/MapServer",{"imageParameters" : imageParameters});
+        ElPoly.setInfoTemplates({2: {infoTemplate:template}});
 
     var JrPoly =    new AGDMSL("http://www2.graniteschools.org/enterprise/rest/services/JrBounds/MapServer",{"imageParameters" : imageParameters,"visible": false});
-    JrPoly.setInfoTemplates({2: {infoTemplate:template}});
-    //var elempnt = new AGDMSL("http://www2.graniteschools.org/enterprise/rest/services/Elementary_Schools/MapServer");
-    //var elemOutline = new AGDMSL("http://www2.graniteschools.org/enterprise/rest/services/Elem_Outlines_19_20/MapServer");
-    //var elemPoly =    new FeatureLayer("http://www2.graniteschools.org/enterprise/rest/services/SchoolBoundaries__19_20/FeatureServer/0", {maxScale: 10001,"opacity":.4, infoTemplate:template, outFields:["*"]});
-    //var elemPoly =    new AGDMSL("http://www2.graniteschools.org/enterprise/rest/services/SchoolBoundaries__19_20/MapServer/0", {setMaxScale: 10001,"opacity":.4, infoTemplate:template, outFields:["*"]});
+        JrPoly.setInfoTemplates({2: {infoTemplate:template}});
 
-    //var elemPoly =    new FeatureLayer("http://www2.graniteschools.org/enterprise/rest/services/SchoolBoundaries__19_20/MapServer/0", {"opacity":.5});
+    var SrPoly =    new AGDMSL("http://www2.graniteschools.org/enterprise/rest/services/SrBounds/MapServer",{"imageParameters" : imageParameters,"visible": false});
+        SrPoly.setInfoTemplates({2: {infoTemplate:template}});
 
-   //var elemOutline = new AGDMSL("http://www2.graniteschools.org/server/rest/services/elemOutline/MapServer");
-
-    //var elemSite = new AGDMSL("http://www2.graniteschools.org/arcgis/rest/services/ElemSitePlans/MapServer", {"opacity":.5});
-
-    //Junior High Package
-   // var JrPoly =    new FeatureLayer("https://services7.arcgis.com/jv9LxT1Je6SeWSAz/ArcGIS/rest/services/Current_Boundaries/FeatureServer/1?token=kY0W4e8Oo7BTijyYMfkcP81gMf5XKAyOavYmVbR2gIFobbH2A85joJid3qUEL0hm6Zxmf4vNTrjlM3TT_t-hUWiNVUUnyWX83Pj9pkuaSW8ERHPpyvxuNLYHXne-AyxqcW_odN5OJ9_wXsNxPf0QdSxN8NJKDwFeZLrXxdY4AwLci_L800DYqKW_CbwEw9V10GbeFBMs4zrNrKMpUQ5MoSFt3AROYKaoqdWi3u6WJzbz3u-NK5FJAeGOtZj1tx1k", {
-  //    "opacity":.4,
-  //    "visible": false,
-   //   });
-    //var JrPoly =    new FeatureLayer("http://www2.graniteschools.org/enterprise/rest/services/SchoolBoundaries__19_20/MapServer/1", {"opacity":.5,"visible": false,});
-    //var JrOutline =    new AGDMSL("http://www2.graniteschools.org/arcgis/rest/services/JrBoundaries_2/MapServer", {"visible": false});
-
-    //Senior High Package
-  //  var SrPoly =    new FeatureLayer("https://services7.arcgis.com/jv9LxT1Je6SeWSAz/ArcGIS/rest/services/Current_Boundaries/FeatureServer/2?token=kY0W4e8Oo7BTijyYMfkcP81gMf5XKAyOavYmVbR2gIFobbH2A85joJid3qUEL0hm6Zxmf4vNTrjlM3TT_t-hUWiNVUUnyWX83Pj9pkuaSW8ERHPpyvxuNLYHXne-AyxqcW_odN5OJ9_wXsNxPf0QdSxN8NJKDwFeZLrXxdY4AwLci_L800DYqKW_CbwEw9V10GbeFBMs4zrNrKMpUQ5MoSFt3AROYKaoqdWi3u6WJzbz3u-NK5FJAeGOtZj1tx1k", {
-    //  "opacity":.4,
-    //  "visible": false,
-   //   });
-   var SrOutline =    new AGDMSL("http://www2.graniteschools.org/arcgis/rest/services/SrBoundaries_2/MapServer", {"visible": false});
-   //var SrOutline =    new AGDMSL("http://www2.graniteschools.org/enterprise/rest/services/AllBoundaryOutlines/MapServer/0", {"visible": false});
-   //var SrOutline =    new FeatureLayer("http://www2.graniteschools.org/enterprise/rest/services/AllBoundaryOutlines/FeatureServer/0", {"visible": false});
-
-   var SrPoly =    new FeatureLayer("http://www2.graniteschools.org/enterprise/rest/services/SchoolBoundaries__19_20/MapServer/2", {"opacity":.5,"visible": false});
-
-   //elemSite.setInfoTemplates({0: {infoTemplate: SiteTemplate}});
     //Bus Services
     var busElem = new AGDMSL("http://www2.graniteschools.org/enterprise/rest/services/BusEligElem/MapServer", {
         visible: false,
@@ -429,21 +373,6 @@ locateButton.startup();
         opacity: .5
     });
 
-    //var addPts = new AGDMSL("http://www2.graniteschools.org/enterprise/rest/services/AddressPopup/MapServer");
-    //https://services1.arcgis.com/99lidPhWCzftIe9K/arcgis/rest/services/UtahAddressPoints/FeatureServer/0"
-
-    // var addPts = new FeatureLayer("https://arcgis1.graniteschools.org/server/rest/services/AddressPopup/FeatureServer/0",{
-    //     mode: FeatureLayer.MODE_ONDEMAND,
-    //     opacity: .5,
-    //     visible: true,
-    //     InfoTemplate:addTemplate,
-    //     outFields: ["FullAdd","City","ZipCode"]
-    // });
-    // addPts.setScaleRange(3000,0);
-
-    //addPts.setInfoTemplates({0: {infoTemplate: addTemplate}});
-
-
 
 
     //Add AGRC basemaps pacakge
@@ -453,14 +382,7 @@ locateButton.startup();
 		overLyr = new WebTiledLayer('https://discover.agrc.utah.gov/login/path/fuel-cola-scoop-canyon/tiles/overlay_basemap/${level}/${col}/${row}',{minScale: 8000});
 		map.addLayers([terLyr,imgLyr,overLyr]);
 
-
-
-
-
-    //map.addLayers([elemPoly,JrPoly,SrPoly,busElem,busJr, busSr,elemOutline,JrOutline,SrOutline,elempnt]);
-    //map.addLayers([elempnt,elemPoly,JrPoly,SrPoly,busElem,busJr, busSr]);
-    //map.addLayers([elemOutline,JrOutline,SrOutline]);
-    map.addLayers([elemPoly,JrPoly,SrPoly,busElem,busJr, busSr,SrOutline]);
+    map.addLayers([ElPoly,JrPoly,SrPoly,busElem,busJr,busSr]);
 
     map.infoWindow.resize(250,75);
 
@@ -500,9 +422,6 @@ locateButton.startup();
     function clearAll(){
       map.graphics.clear();
       map.infoWindow.hide();
-      //var inputs = dojo.query('input');
-      //for(var i=0; i< inputs.length; i++)
-        //inputs[i].value = '';
     }
 
 
