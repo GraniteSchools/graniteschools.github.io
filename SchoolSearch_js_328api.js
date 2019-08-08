@@ -382,7 +382,7 @@ locateButton.startup();
     var elemPoly =    new AGDMSL("http://www2.graniteschools.org/enterprise/rest/services/ElemBounds/MapServer",{"imageParameters" : imageParameters});
     elemPoly.setInfoTemplates({2: {infoTemplate:template}});
 
-    var JrPoly =    new AGDMSL("http://www2.graniteschools.org/enterprise/rest/services/JrBounds/MapServer",{"imageParameters" : imageParameters},{"visible": false});
+    var JrPoly =    new AGDMSL("http://www2.graniteschools.org/enterprise/rest/services/JrBounds/MapServer",{"imageParameters" : imageParameters,"visible": false});
     JrPoly.setInfoTemplates({2: {infoTemplate:template}});
     //var elempnt = new AGDMSL("http://www2.graniteschools.org/enterprise/rest/services/Elementary_Schools/MapServer");
     //var elemOutline = new AGDMSL("http://www2.graniteschools.org/enterprise/rest/services/Elem_Outlines_19_20/MapServer");
