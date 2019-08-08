@@ -50,7 +50,9 @@ require([
         ElPoly.setVisibility(true);
         BS_El.setVisibility(true);
         JrPoly.setVisibility(false);
+        BS_Jr.setVisibility(false);
         SrPoly.setVisibility(false);
+        BS_Sr.setVisibility(false)
 
         k()
     }
@@ -70,7 +72,7 @@ require([
         ElPoly.setVisibility(false);
         BS_El.setVisibility(false);
         JrPoly.setVisibility(false);
-        BS_Jr.setVisibility(true);
+        BS_Jr.setVisibility(false);
         SrPoly.setVisibility(true);
         BS_Sr.setVisibility(true)
 
@@ -116,14 +118,11 @@ require([
             } else if (JrPoly.visible === true) {
                 busElem.setVisibility(false);
                 busJr.setVisibility(true);
-
                 busSr.setVisibility(false)
 
             } else if (SrPoly.visible === true) {
                 busElem.setVisibility(false);
-
                 busJr.setVisibility(false);
-
                 busSr.setVisibility(true)
 
             }
