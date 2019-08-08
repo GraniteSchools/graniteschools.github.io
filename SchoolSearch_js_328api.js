@@ -381,6 +381,9 @@ locateButton.startup();
     //Elementary Package
     var elemPoly =    new AGDMSL("http://www2.graniteschools.org/enterprise/rest/services/ElemBounds/MapServer",{"imageParameters" : imageParameters});
     elemPoly.setInfoTemplates({2: {infoTemplate:template}});
+
+    var JrPoly =    new AGDMSL("http://www2.graniteschools.org/enterprise/rest/services/JrBounds/MapServer",{"imageParameters" : imageParameters});
+    JrPoly.setInfoTemplates({2: {infoTemplate:template}});
     //var elempnt = new AGDMSL("http://www2.graniteschools.org/enterprise/rest/services/Elementary_Schools/MapServer");
     //var elemOutline = new AGDMSL("http://www2.graniteschools.org/enterprise/rest/services/Elem_Outlines_19_20/MapServer");
     //var elemPoly =    new FeatureLayer("http://www2.graniteschools.org/enterprise/rest/services/SchoolBoundaries__19_20/FeatureServer/0", {maxScale: 10001,"opacity":.4, infoTemplate:template, outFields:["*"]});
@@ -397,8 +400,8 @@ locateButton.startup();
   //    "opacity":.4,
   //    "visible": false,
    //   });
-    var JrPoly =    new FeatureLayer("http://www2.graniteschools.org/enterprise/rest/services/SchoolBoundaries__19_20/MapServer/1", {"opacity":.5,"visible": false,});
-    var JrOutline =    new AGDMSL("http://www2.graniteschools.org/arcgis/rest/services/JrBoundaries_2/MapServer", {"visible": false});
+    //var JrPoly =    new FeatureLayer("http://www2.graniteschools.org/enterprise/rest/services/SchoolBoundaries__19_20/MapServer/1", {"opacity":.5,"visible": false,});
+    //var JrOutline =    new AGDMSL("http://www2.graniteschools.org/arcgis/rest/services/JrBoundaries_2/MapServer", {"visible": false});
 
     //Senior High Package
   //  var SrPoly =    new FeatureLayer("https://services7.arcgis.com/jv9LxT1Je6SeWSAz/ArcGIS/rest/services/Current_Boundaries/FeatureServer/2?token=kY0W4e8Oo7BTijyYMfkcP81gMf5XKAyOavYmVbR2gIFobbH2A85joJid3qUEL0hm6Zxmf4vNTrjlM3TT_t-hUWiNVUUnyWX83Pj9pkuaSW8ERHPpyvxuNLYHXne-AyxqcW_odN5OJ9_wXsNxPf0QdSxN8NJKDwFeZLrXxdY4AwLci_L800DYqKW_CbwEw9V10GbeFBMs4zrNrKMpUQ5MoSFt3AROYKaoqdWi3u6WJzbz3u-NK5FJAeGOtZj1tx1k", {
