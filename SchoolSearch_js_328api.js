@@ -52,7 +52,7 @@ require([
         //elempnt.setVisibility(true);
 
         JrPoly.setVisibility(false);
-        JrOutline.setVisibility(false);
+        //JrOutline.setVisibility(false);
         SrPoly.setVisibility(false);
         SrOutline.setVisibility(false);
 
@@ -64,7 +64,7 @@ require([
         elemPoly.setVisibility(false);
         //elemOutline.setVisibility(false);
         //elempnt.setVisibility(false);
-        JrOutline.setVisibility(true);
+        //JrOutline.setVisibility(true);
         JrPoly.setVisibility(true);
         SrPoly.setVisibility(false);
         SrOutline.setVisibility(false);
@@ -76,7 +76,7 @@ require([
         //elemOutline.setVisibility(false);
         //elempnt.setVisibility(false);
         JrPoly.setVisibility(false);
-        JrOutline.setVisibility(false);
+        //JrOutline.setVisibility(false);
         SrPoly.setVisibility(true);
         SrOutline.setVisibility(true);
         k()
@@ -88,7 +88,7 @@ require([
                 busElem.setVisibility(true);
                 busJr.setVisibility(false);
                 busSr.setVisibility(false)
-            } else if (JrOutline.visible === true) {
+            } else if (JrPoly.visible === true) {
                 busElem.setVisibility(false);
                 busJr.setVisibility(true);
                 busSr.setVisibility(false)
@@ -114,7 +114,7 @@ require([
                 busElem.setVisibility(true);
                 busJr.setVisibility(false);
                 busSr.setVisibility(false)
-            } else if (JrOutline.visible === true) {
+            } else if (JrPoly.visible === true) {
                 busElem.setVisibility(false);
                 busJr.setVisibility(true);
                 busSr.setVisibility(false)
@@ -460,7 +460,7 @@ locateButton.startup();
     //map.addLayers([elemPoly,JrPoly,SrPoly,busElem,busJr, busSr,elemOutline,JrOutline,SrOutline,elempnt]);
     //map.addLayers([elempnt,elemPoly,JrPoly,SrPoly,busElem,busJr, busSr]);
     //map.addLayers([elemOutline,JrOutline,SrOutline]);
-    map.addLayers([elemPoly,JrPoly,SrPoly,busElem,busJr, busSr,JrOutline,SrOutline]);
+    map.addLayers([elemPoly,JrPoly,SrPoly,busElem,busJr, busSr,SrOutline]);
 
     map.infoWindow.resize(250,75);
 
