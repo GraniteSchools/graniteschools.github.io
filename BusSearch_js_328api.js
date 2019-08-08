@@ -368,13 +368,13 @@ locateButton.startup();
 
     //Elementary Package
     var ElPoly =    new AGDMSL("http://www2.graniteschools.org/enterprise/rest/services/ElemBounds/MapServer",{"imageParameters" : imageParameters});
-        ElPoly.setInfoTemplates({2: {infoTemplate:template}});
+        //ElPoly.setInfoTemplates({2: {infoTemplate:template}});
 
     var JrPoly =    new AGDMSL("http://www2.graniteschools.org/enterprise/rest/services/JrBounds/MapServer",{"imageParameters" : imageParameters,"visible": false});
-        JrPoly.setInfoTemplates({2: {infoTemplate:template}});
+        //JrPoly.setInfoTemplates({2: {infoTemplate:template}});
 
     var SrPoly =    new AGDMSL("http://www2.graniteschools.org/enterprise/rest/services/SrBounds/MapServer",{"imageParameters" : imageParameters,"visible": false});
-        SrPoly.setInfoTemplates({2: {infoTemplate:template}});
+        //SrPoly.setInfoTemplates({2: {infoTemplate:template}});
 
     //Bus Services
     var busElem = new AGDMSL("http://www2.graniteschools.org/enterprise/rest/services/BusEligElem/MapServer", {
@@ -392,9 +392,9 @@ locateButton.startup();
 
     //Bus Stops
 //var BS_El = new AGDMSL("https://arcgis1.graniteschools.org/server/rest/services/BusStopsElem/MapServer", {visible:false});
-var BS_El = new AGDMSL("http://www2.graniteschools.org/enterprise/rest/services/BusStopsElem/MapServer", {visible:true});
-var BS_Jr = new AGDMSL("https://arcgis1.graniteschools.org/server/rest/services/BusStopsJr/MapServer", {visible:false});
-var BS_Sr = new AGDMSL("https://arcgis1.graniteschools.org/server/rest/services/BusStopsSr/MapServer", {visible:false});
+var BS_El = new AGDMSL("http://www2.graniteschools.org/enterprise/rest/services/BusStopsElem/MapServer", {visible:false});
+var BS_Jr = new AGDMSL("http://www2.graniteschools.org/enterprise/rest/services/BusStopsJr/MapServer", {visible:false});
+var BS_Sr = new AGDMSL("http://www2.graniteschools.org/enterprise/rest/services/BusStopsSr/MapServer", {visible:false});
 BS_El.setInfoTemplates({0: {infoTemplate: busTemplate}});
 BS_Jr.setInfoTemplates({0: {infoTemplate: busTemplate}});
 BS_Sr.setInfoTemplates({0: {infoTemplate: busTemplate}});
