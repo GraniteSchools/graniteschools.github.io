@@ -48,6 +48,7 @@ require([
     parser.parse();
     function T() {
         ElPoly.setVisibility(true);
+        BS_El.setVisibility(true);
         JrPoly.setVisibility(false);
         SrPoly.setVisibility(false);
 
@@ -56,16 +57,22 @@ require([
 
     function N() {
         ElPoly.setVisibility(false);
+        BS_El.setVisibility(false);
         JrPoly.setVisibility(true);
+        BS_Jr.setVisibility(true);
         SrPoly.setVisibility(false);
+        BS_Sr.setVisibility(false)
 
         k()
     }
 
     function C() {
         ElPoly.setVisibility(false);
+        BS_El.setVisibility(false);
         JrPoly.setVisibility(false);
+        BS_Jr.setVisibility(true);
         SrPoly.setVisibility(true);
+        BS_Sr.setVisibility(true)
 
         k()
     }
