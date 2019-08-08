@@ -400,7 +400,7 @@ locateButton.startup();
 
     //Bus Stops
 //var BS_El = new AGDMSL("https://arcgis1.graniteschools.org/server/rest/services/BusStopsElem/MapServer", {visible:false});
-var BS_El = new AGDMSL("http://www2.graniteschools.org/enterprise/rest/services/BusStopsElem/MapServer", {visible:false});
+var BS_El = new AGDMSL("http://www2.graniteschools.org/enterprise/rest/services/BusStopsElem/MapServer", {visible:true});
 var BS_Jr = new AGDMSL("http://www2.graniteschools.org/enterprise/rest/services/BusStopsJr/MapServer", {visible:false});
 var BS_Sr = new AGDMSL("http://www2.graniteschools.org/enterprise/rest/services/BusStopsSr/MapServer", {visible:false});
 BS_El.setInfoTemplates({0: {infoTemplate: busTemplate}});
