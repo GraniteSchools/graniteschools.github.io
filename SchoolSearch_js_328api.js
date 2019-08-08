@@ -339,7 +339,7 @@ require([
 });
 
 var imageParameters = new ImageParameters();
-imageParameters.format = "png32"
+imageParameters.format = "png8"
 
     var template = new InfoTemplate();
     template.setTitle("<b>${DIST_NAME}</b>");
