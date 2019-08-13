@@ -31,7 +31,7 @@ function(dom,parser,Map,Extent,WebTiledLayer,Measurement,GeometryService){
 
 esri.config.defaults.io.proxyUrl = "/proxy";
 esri.config.defaults.io.alwaysUseProxy = false;
-esri.config.defaults.geometryService = new esri.tasks.GeometryService("http://205.124.110.162/ArcGIS/rest/services/Geometry/GeometryServer");
+esri.config.defaults.geometryService = new esri.tasks.GeometryService("https://www2.graniteschools.org/enterprise/rest/services/Utilities/Geometry/GeometryServer");
 
 	//Adds the ESRI Aerial Imagery Basemap
 	map = new esri.Map("map", {
