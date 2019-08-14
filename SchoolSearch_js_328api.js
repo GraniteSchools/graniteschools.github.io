@@ -323,6 +323,15 @@ require([
 var imageParameters = new ImageParameters();
 imageParameters.format = "png32"
 
+var busTemplate = new InfoTemplate();
+busTemplate.setTitle("<b>#${BUS_NUM}</b>");
+busTemplate.setContent("<b>School:</b>  ${SCHOOL_NAM}<br>" +
+                    "<b>Bus Number:</b>  ${BUS_NUM}<br>" +
+                    "<b>Address:</b>  ${ADDRESS}<br>" +
+                    "<b>Pickup Time:</b>  ${PICKUP}<br>" +
+                    "<b>Route ID:</b>  ${ROUTE_ID}<br>" +
+                    "<b>Stop #:</b>  ${STOP_NUM}");
+
     var template = new InfoTemplate();
     template.setTitle("<b>${DIST_NAME}</b>");
     template.setContent("<b>${ADDRESS}</b><br>"+"<b>${CITY}</b><br>"+"<a target='_blank' href=${HTTP}>School Website</a>")
@@ -331,14 +340,7 @@ imageParameters.format = "png32"
     addTemplate.setTitle("<b>${NAME}</b>");
     addTemplate.setContent("<b>${ZIP5}</b>")
 
-    var busTemplate = new InfoTemplate();
-    busTemplate.setTitle("<b>#${BUS_NUM}</b>");
-    busTemplate.setContent("<b>School:</b>  ${SCHOOL_NAM}<br>" +
-                        "<b>Bus Number:</b>  ${BUS_NUM}<br>" +
-                        "<b>Address:</b>  ${ADDRESS}<br>" +
-                        "<b>Pickup Time:</b>  ${PICKUP}<br>" +
-                        "<b>Route ID:</b>  ${ROUTE_ID}<br>" +
-                        "<b>Stop #:</b>  ${STOP_NUM}");
+
 
 //dojo.connect(map, 'onLoad', function(map){initToolbar(map);});
 //  }, dom.byId("measurementDiv"));
