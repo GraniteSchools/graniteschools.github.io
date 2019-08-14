@@ -214,7 +214,7 @@ require([
             dojo.byId("elResults").innerHTML += "<font size='3'><a href='" + e.features[0].attributes.URL + "'>District Home Page</a><br/>"
         })
     }
-    
+
     function D(e) {
         query = new Query();
         query.outFields = ["Precinct", "ROMAN", "BRD_MEM"];
@@ -373,6 +373,12 @@ locateButton.startup();
         opacity: .5
     });
 
+    //Zip GeocodeServer
+    var zip5 = new AGDMSL("http://www2.graniteschools.org/enterprise/rest/services/ZipCodes/MapServer", {
+        visible: false
+    });
+
+
 
 
     //Add AGRC basemaps pacakge
@@ -382,7 +388,7 @@ locateButton.startup();
 		overLyr = new WebTiledLayer('https://discover.agrc.utah.gov/login/path/fuel-cola-scoop-canyon/tiles/overlay_basemap/${level}/${col}/${row}',{minScale: 8000});
 		map.addLayers([terLyr,imgLyr,overLyr]);
 
-    map.addLayers([ElPoly,JrPoly,SrPoly,busElem,busJr,busSr]);
+    map.addLayers([ElPoly,JrPoly,SrPoly,busElem,busJr,busSr,zip5]);
 
     map.infoWindow.resize(250,75);
 
