@@ -379,7 +379,7 @@ locateButton.startup();
 
     //Zip GeocodeServer
     var zip5 = new AGDMSL("http://www2.graniteschools.org/enterprise/rest/services/ZipCodes/MapServer", {
-        visible: false
+        visible: true
     });
     zip5.setInfoTemplates({2: {infoTemplate:addTemplate}});
 
