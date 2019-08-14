@@ -47,25 +47,36 @@ require([
     {
     parser.parse();
     function T() {
-        ElPoly.setVisibility(true);
-        JrPoly.setVisibility(false);
-        SrPoly.setVisibility(false);
+      ElPoly.setVisibility(true);
+      BS_El.setVisibility(true);
+      JrPoly.setVisibility(false);
+      BS_Jr.setVisibility(false);
+      SrPoly.setVisibility(false);
+      BS_Sr.setVisibility(false)
 
         k()
     }
 
     function N() {
-        ElPoly.setVisibility(false);
-        JrPoly.setVisibility(true);
-        SrPoly.setVisibility(false);
+      ElPoly.setVisibility(false);
+      BS_El.setVisibility(false);
+      JrPoly.setVisibility(true);
+      BS_Jr.setVisibility(true);
+      SrPoly.setVisibility(false);
+      BS_Sr.setVisibility(false)
+
 
         k()
     }
 
     function C() {
-        ElPoly.setVisibility(false);
-        JrPoly.setVisibility(false);
-        SrPoly.setVisibility(true);
+      ElPoly.setVisibility(false);
+      BS_El.setVisibility(false);
+      JrPoly.setVisibility(false);
+      BS_Jr.setVisibility(false);
+      SrPoly.setVisibility(true);
+      BS_Sr.setVisibility(true)
+
 
         k()
     }
@@ -320,6 +331,15 @@ imageParameters.format = "png32"
     addTemplate.setTitle("<b>${NAME}</b>");
     addTemplate.setContent("<b>${ZIP5}</b>")
 
+    var busTemplate = new InfoTemplate();
+    busTemplate.setTitle("<b>#${BUS_NUM}</b>");
+    busTemplate.setContent("<b>School:</b>  ${SCHOOL_NAM}<br>" +
+                        "<b>Bus Number:</b>  ${BUS_NUM}<br>" +
+                        "<b>Address:</b>  ${ADDRESS}<br>" +
+                        "<b>Pickup Time:</b>  ${PICKUP}<br>" +
+                        "<b>Route ID:</b>  ${ROUTE_ID}<br>" +
+                        "<b>Stop #:</b>  ${STOP_NUM}");
+
 //dojo.connect(map, 'onLoad', function(map){initToolbar(map);});
 //  }, dom.byId("measurementDiv"));
 var locateButton = new LocateButton({
@@ -377,6 +397,15 @@ locateButton.startup();
         opacity: .5
     });
 
+    //Bus Stops
+//var BS_El = new AGDMSL("https://arcgis1.graniteschools.org/server/rest/services/BusStopsElem/MapServer", {visible:false});
+var BS_El = new AGDMSL("http://www2.graniteschools.org/enterprise/rest/services/BusStopsElem/MapServer");
+var BS_Jr = new AGDMSL("http://www2.graniteschools.org/enterprise/rest/services/BusStopsJr/MapServer", {visible:false});
+var BS_Sr = new AGDMSL("http://www2.graniteschools.org/enterprise/rest/services/BusStopsSr/MapServer", {visible:false});
+BS_El.setInfoTemplates({0: {infoTemplate: busTemplate}});
+BS_Jr.setInfoTemplates({0: {infoTemplate: busTemplate}});
+BS_Sr.setInfoTemplates({0: {infoTemplate: busTemplate}});
+
     //Zip GeocodeServer
     var zip5 = new AGDMSL("http://www2.graniteschools.org/enterprise/rest/services/ZipCodes/MapServer", {
         visible: true
@@ -393,7 +422,7 @@ locateButton.startup();
 		overLyr = new WebTiledLayer('https://discover.agrc.utah.gov/login/path/fuel-cola-scoop-canyon/tiles/overlay_basemap/${level}/${col}/${row}',{minScale: 8000});
 		map.addLayers([terLyr,imgLyr,overLyr]);
 
-    map.addLayers([ElPoly,JrPoly,SrPoly,busElem,busJr,busSr,zip5]);
+    map.addLayers([ElPoly,JrPoly,SrPoly,busElem,busJr,busSr,busElem,busJr,busSr,zip5]);
 
     map.infoWindow.resize(250,75);
 
