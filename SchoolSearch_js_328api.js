@@ -316,6 +316,10 @@ imageParameters.format = "png32"
     template.setTitle("<b>${DIST_NAME}</b>");
     template.setContent("<b>${ADDRESS}</b><br>"+"<b>${CITY}</b><br>"+"<a target='_blank' href=${HTTP}>School Website</a>")
 
+    var addTemplate = new InfoTemplate();
+    addTemplate.setTitle("<b>${NAME}</b>");
+    addTemplate.setContent("<b>${ZIP5}</b>")
+
 //dojo.connect(map, 'onLoad', function(map){initToolbar(map);});
 //  }, dom.byId("measurementDiv"));
 var locateButton = new LocateButton({
@@ -377,6 +381,7 @@ locateButton.startup();
     var zip5 = new AGDMSL("http://www2.graniteschools.org/enterprise/rest/services/ZipCodes/MapServer", {
         visible: false
     });
+    zip5.setInfoTemplates({2: {infoTemplate:addTemplate}});
 
 
 
@@ -408,7 +413,7 @@ locateButton.startup();
 
     //Query Tasks
     //Zip
-    zipQueryTask = new QueryTask("https://services1.arcgis.com/99lidPhWCzftIe9K/arcgis/rest/services/UtahZipCodeAreas/FeatureServer");
+    //zipQueryTask = new QueryTask("https://services1.arcgis.com/99lidPhWCzftIe9K/arcgis/rest/services/UtahZipCodeAreas/FeatureServer");
     //Precinct District
     prQueryTask = new QueryTask("http://www2.graniteschools.org/enterprise/rest/services/PrecinctAndDistrcit/MapServer/0");
     sdQueryTask = new QueryTask("http://www2.graniteschools.org/enterprise/rest/services/PrecinctAndDistrcit/MapServer/1");
