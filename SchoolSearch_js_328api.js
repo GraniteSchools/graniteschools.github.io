@@ -422,7 +422,7 @@ BS_Sr.setInfoTemplates({0: {infoTemplate: busTemplate}});
 		overLyr = new WebTiledLayer('https://discover.agrc.utah.gov/login/path/fuel-cola-scoop-canyon/tiles/overlay_basemap/${level}/${col}/${row}',{minScale: 8000});
 		map.addLayers([terLyr,imgLyr,overLyr]);
 
-    map.addLayers([ElPoly,JrPoly,SrPoly,busElem,busJr,busSr,busElem,busJr,busSr,zip5]);
+    map.addLayers([ElPoly,JrPoly,SrPoly,BS_El,BS_Jr,BS_Sr,busElem,busJr,busSr,zip5]);
 
     map.infoWindow.resize(250,75);
 
