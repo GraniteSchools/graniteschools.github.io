@@ -214,7 +214,7 @@ require([
             dojo.byId("elResults").innerHTML += "<font size='3'><a href='" + e.features[0].attributes.URL + "'>District Home Page</a><br/>"
         })
     }
-    
+
     function D(e) {
         query = new Query();
         query.outFields = ["Precinct", "ROMAN", "BRD_MEM"];
@@ -401,8 +401,9 @@ locateButton.startup();
     });
 
     //Query Tasks
+    //Zip
+    zipQueryTask = new QueryTask("https://services1.arcgis.com/99lidPhWCzftIe9K/arcgis/rest/services/UtahZipCodeAreas/FeatureServer");
     //Precinct District
-
     prQueryTask = new QueryTask("http://www2.graniteschools.org/enterprise/rest/services/PrecinctAndDistrcit/MapServer/0");
     sdQueryTask = new QueryTask("http://www2.graniteschools.org/enterprise/rest/services/PrecinctAndDistrcit/MapServer/1");
 
