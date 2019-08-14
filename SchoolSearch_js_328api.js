@@ -407,8 +407,9 @@ locateButton.startup();
     });
 
     //Query Tasks
+    //Zip
+    zipQueryTask = new QueryTask("https://services1.arcgis.com/99lidPhWCzftIe9K/arcgis/rest/services/UtahZipCodeAreas/FeatureServer");
     //Precinct District
-
     prQueryTask = new QueryTask("http://www2.graniteschools.org/enterprise/rest/services/PrecinctAndDistrcit/MapServer/0");
     sdQueryTask = new QueryTask("http://www2.graniteschools.org/enterprise/rest/services/PrecinctAndDistrcit/MapServer/1");
 
