@@ -333,8 +333,9 @@ busTemplate.setContent("<b>School:</b>  ${SCHOOL_NAM}<br>" +
                     "<b>Stop #:</b>  ${STOP_NUM}");
 
     var template = new InfoTemplate();
-    template.setTitle("<b>${DIST_NAME}</b>");
-    template.setContent("<b>${ADDRESS}</b><br>"+"<b>${CITY}</b><br>"+"<a target='_blank' href=${HTTP}>School Website</a>")
+    template.setTitle("<b>${NAME}</b>");
+    //template.setContent("<b>${ADDRESS}</b><br>"+"<b>${CITY}</b><br>"+"<a target='_blank' href=${HTTP}>School Website</a>")
+    template.setContent("<b>${ADDRESS}</b>")
 
     var addTemplate = new InfoTemplate();
     addTemplate.setTitle("<b>${NAME}</b>");
