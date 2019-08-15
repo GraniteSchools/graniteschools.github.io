@@ -338,8 +338,8 @@ busTemplate.setContent("<b>School:</b>  ${SCHOOL_NAM}<br>" +
     template.setContent("<b>${ADDRESS}</b>")
 
     var addTemplate = new InfoTemplate();
-    addTemplate.setTitle("<b>${NAME}</b>");
-    addTemplate.setContent("<b>${ZIP5}</b>")
+    addTemplate.setTitle("<b>${Point Type}</b>");
+    addTemplate.setContent("<b>${Full Address}</b><br>"+"<b>${CITY}</b><br>"+"<b>${Zip Code}</b><br>")
 
 
 
@@ -413,10 +413,11 @@ BS_Sr.setInfoTemplates({0: {infoTemplate: busTemplate}});
     var zip5 = new AGDMSL("http://www2.graniteschools.org/enterprise/rest/services/ZipCodes/MapServer", {
         visible: true
     });
-    zip5.setInfoTemplates({0: {infoTemplate:addTemplate}});
+
 
     //Address points
     var addPts = new FeatureLayer('https://services1.arcgis.com/99lidPhWCzftIe9K/arcgis/rest/services/UtahAddressPoints/FeatureServer/0',{minScale:4000});
+    addPts.setInfoTemplates({0: {infoTemplate:addTemplate}});
 
 
     //Add AGRC basemaps pacakge
