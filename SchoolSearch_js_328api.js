@@ -418,10 +418,10 @@ BS_Sr.setInfoTemplates({0: {infoTemplate: busTemplate}});
 
     //Address points
     var addPts = new FeatureLayer('https://services1.arcgis.com/99lidPhWCzftIe9K/arcgis/rest/services/UtahAddressPoints/FeatureServer/0',{minScale:2000,
-      mode: FeatureLayer.MODE_SELECTION,
+      mode: FeatureLayer.MODE_ONDEMAND,
       //infoTemplate: addTemplate,
-      infoTemplate: new InfoTemplate(),
-      outFields: ["*"]
+      outFields: ["*"],
+      infoTemplate: new InfoTemplate()
     });
     //addPts.setInfoTemplates({0: {infoTemplate:addTemplate}});
     //addPts.setInfoTemplate(addTemplate);
