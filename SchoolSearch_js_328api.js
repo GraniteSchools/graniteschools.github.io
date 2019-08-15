@@ -416,7 +416,7 @@ BS_Sr.setInfoTemplates({0: {infoTemplate: busTemplate}});
 
 
     //Address points
-    var addPts = new FeatureLayer('https://services1.arcgis.com/99lidPhWCzftIe9K/arcgis/rest/services/UtahAddressPoints/FeatureServer/0',{minScale:2000
+    var addPts = new FeatureLayer('https://services1.arcgis.com/99lidPhWCzftIe9K/arcgis/rest/services/UtahAddressPoints/FeatureServer/0',{minScale:2000,
       mode: esri.layers.FeatureLayer.MODE_ONDEMAND,
       infoTemplate: addTemplate,
       outFields: ["*"]
