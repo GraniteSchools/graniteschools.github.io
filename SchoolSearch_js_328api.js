@@ -377,13 +377,13 @@ locateButton.startup();
 
     //Elementary Package
     var ElPoly =    new AGDMSL("http://www2.graniteschools.org/enterprise/rest/services/ElemBounds/MapServer",{"imageParameters" : imageParameters});
-        ElPoly.setInfoTemplates({2: {infoTemplate:template}});
+        ElPoly.setInfoTemplates({0: {infoTemplate:template}});
 
     var JrPoly =    new AGDMSL("http://www2.graniteschools.org/enterprise/rest/services/JrBounds/MapServer",{"imageParameters" : imageParameters,"visible": false});
-        JrPoly.setInfoTemplates({2: {infoTemplate:template}});
+        JrPoly.setInfoTemplates({0: {infoTemplate:template}});
 
     var SrPoly =    new AGDMSL("http://www2.graniteschools.org/enterprise/rest/services/SrBounds/MapServer",{"imageParameters" : imageParameters,"visible": false});
-        SrPoly.setInfoTemplates({2: {infoTemplate:template}});
+        SrPoly.setInfoTemplates({0: {infoTemplate:template}});
 
     //Bus Services
     var busElem = new AGDMSL("http://www2.graniteschools.org/enterprise/rest/services/BusEligElem/MapServer", {
