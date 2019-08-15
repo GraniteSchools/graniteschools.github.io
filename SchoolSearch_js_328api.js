@@ -421,7 +421,7 @@ BS_Sr.setInfoTemplates({0: {infoTemplate: busTemplate}});
       mode: FeatureLayer.MODE_ONDEMAND,
       //infoTemplate: addTemplate,
       outFields: ["*"],
-      infoTemplate: new InfoTemplate()
+      infoTemplate: new InfoTemplate("Address Info","<b>${Full Address}</b><br>"+"<b>${CITY}</b><br>"+"<b>${Zip Code}</b><br>")
     });
     //addPts.setInfoTemplates({0: {infoTemplate:addTemplate}});
     //addPts.setInfoTemplate(addTemplate);
@@ -440,8 +440,8 @@ BS_Sr.setInfoTemplates({0: {infoTemplate: busTemplate}});
     //addPts.hide();
 
 
-    locator = new i("http://www2.graniteschools.org/enterprise/rest/services/AGRC_CompositeLocator/GeocodeServer");
-    locator.on("address-to-locations-complete", O);
+  locator = new i("http://www2.graniteschools.org/enterprise/rest/services/AGRC_CompositeLocator/GeocodeServer");
+  locator.on("address-to-locations-complete", O);
    dom.byId("locate").on("click", A);
    dom.byId("elButton").on("click", T);
    dom.byId("jrButton").on("click", N);
