@@ -415,7 +415,8 @@ BS_Sr.setInfoTemplates({0: {infoTemplate: busTemplate}});
     });
     zip5.setInfoTemplates({0: {infoTemplate:addTemplate}});
 
-
+    //Address points
+    var addPts = new FeatureLayer('https://services1.arcgis.com/99lidPhWCzftIe9K/arcgis/rest/services/UtahAddressPoints/FeatureServer'{minScale:2000});
 
 
     //Add AGRC basemaps pacakge
@@ -425,7 +426,7 @@ BS_Sr.setInfoTemplates({0: {infoTemplate: busTemplate}});
 		overLyr = new WebTiledLayer('https://discover.agrc.utah.gov/login/path/fuel-cola-scoop-canyon/tiles/overlay_basemap/${level}/${col}/${row}',{minScale: 8000});
 		map.addLayers([terLyr,imgLyr,overLyr]);
 
-    map.addLayers([ElPoly,JrPoly,SrPoly,BS_El,BS_Jr,BS_Sr,busElem,busJr,busSr,zip5]);
+    map.addLayers([ElPoly,JrPoly,SrPoly,BS_El,BS_Jr,BS_Sr,busElem,busJr,busSr,zip5,addPts]);
 
     map.infoWindow.resize(250,75);
 
