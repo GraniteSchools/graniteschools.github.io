@@ -339,7 +339,8 @@ busTemplate.setContent("<b>School:</b>  ${SCHOOL_NAM}<br>" +
 
     var addTemplate = new InfoTemplate();
     addTemplate.setTitle("<b>${Point Type}</b>");
-    addTemplate.setContent("<b>${Full Address}</b><br>"+"<b>${CITY}</b><br>"+"<b>${Zip Code}</b><br>")
+    //addTemplate.setContent("<b>${Full Address}</b><br>"+"<b>${CITY}</b><br>"+"<b>${Zip Code}</b><br>")
+    addTemplate.setContent("<b>${Full Address}</b>")
 
 
 
