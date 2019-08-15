@@ -421,7 +421,8 @@ BS_Sr.setInfoTemplates({0: {infoTemplate: busTemplate}});
       mode: FeatureLayer.MODE_ONDEMAND,
       //infoTemplate: addTemplate,
       outFields: ["*"],
-      infoTemplate: new InfoTemplate("Address Info","<b>${Full Address}</b><br>"+"<b>${CITY}</b><br>"+"<b>${Zip Code}</b><br>")
+      //infoTemplate: new InfoTemplate("Address Info","<b>${Full Address}</b><br>"+"<b>${CITY}</b><br>"+"<b>${Zip Code}</b><br>")
+      infoTemplate: new InfoTemplate("Address Info","<b>${Full Address}</b>")
     });
     //addPts.setInfoTemplates({0: {infoTemplate:addTemplate}});
     //addPts.setInfoTemplate(addTemplate);
