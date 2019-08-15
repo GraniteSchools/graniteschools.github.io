@@ -418,6 +418,7 @@ BS_Sr.setInfoTemplates({0: {infoTemplate: busTemplate}});
     //Address points
     var addPts = new FeatureLayer('https://services1.arcgis.com/99lidPhWCzftIe9K/arcgis/rest/services/UtahAddressPoints/FeatureServer/0',{minScale:4000});
     //addPts.setInfoTemplates({0: {infoTemplate:addTemplate}});
+    addPts.setInfoTemplate(addTemplate);
 
 
     //Add AGRC basemaps pacakge
