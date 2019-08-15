@@ -429,6 +429,7 @@ BS_Sr.setInfoTemplates({0: {infoTemplate: busTemplate}});
     map.addLayers([ElPoly,JrPoly,SrPoly,BS_El,BS_Jr,BS_Sr,busElem,busJr,busSr,zip5,addPts]);
 
     map.infoWindow.resize(250,75);
+    addPts.hide();
 
 
     locator = new i("http://www2.graniteschools.org/enterprise/rest/services/AGRC_CompositeLocator/GeocodeServer");
