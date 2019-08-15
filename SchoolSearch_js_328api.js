@@ -416,7 +416,7 @@ BS_Sr.setInfoTemplates({0: {infoTemplate: busTemplate}});
 
 
     //Address points
-    var addPts = new FeatureLayer('https://services1.arcgis.com/99lidPhWCzftIe9K/arcgis/rest/services/UtahAddressPoints/FeatureServer/0',{minScale:4000});
+    var addPts = new FeatureLayer('https://services1.arcgis.com/99lidPhWCzftIe9K/arcgis/rest/services/UtahAddressPoints/FeatureServer/0',{minScale:2000});
     //addPts.setInfoTemplates({0: {infoTemplate:addTemplate}});
     addPts.setInfoTemplate(addTemplate);
 
@@ -431,7 +431,7 @@ BS_Sr.setInfoTemplates({0: {infoTemplate: busTemplate}});
     map.addLayers([ElPoly,JrPoly,SrPoly,BS_El,BS_Jr,BS_Sr,busElem,busJr,busSr,zip5,addPts]);
 
     map.infoWindow.resize(250,75);
-    addPts.hide();
+    //addPts.hide();
 
 
     locator = new i("http://www2.graniteschools.org/enterprise/rest/services/AGRC_CompositeLocator/GeocodeServer");
