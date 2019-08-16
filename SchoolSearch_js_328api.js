@@ -334,7 +334,7 @@ busTemplate.setContent("<b>School:</b>  ${SCHOOL_NAM}<br>" +
 
     var template = new InfoTemplate();
     template.setTitle("<b>${NAME}</b>");
-    //template.setContent("<b>${ADDRESS}</b><br>"+"<b>${CITY}</b><br>"+"<a target='_blank' href=${HTTP}>School Website</a>")
+    template.setContent("<b>${ADDRESS}</b><br>"+"<b>${CITY}</b><br>"+"<a target='_blank' href=${HTTP}>School Website</a>")
     template.setContent("<b>${ADDRESS}</b>")
 
     var addTemplate = new InfoTemplate();
@@ -343,7 +343,8 @@ busTemplate.setContent("<b>School:</b>  ${SCHOOL_NAM}<br>" +
     addTemplate.setContent("<b>${Full Address}</b>")
 
 
-
+//https://slco.org/assessor/new/javaapi2/parcel.cfm?parcel=15332270220000
+//https://slco.org/assessor/new/valuationInfoExpanded.cfm?parcel_id=15332260100000&nbhd=783&PA=1
 //dojo.connect(map, 'onLoad', function(map){initToolbar(map);});
 //  }, dom.byId("measurementDiv"));
 var locateButton = new LocateButton({
@@ -421,7 +422,10 @@ BS_Sr.setInfoTemplates({0: {infoTemplate: busTemplate}});
       mode: FeatureLayer.MODE_ONDEMAND,
       //infoTemplate: addTemplate,
       outFields: ["*"],
-      infoTemplate: new InfoTemplate("Address Info "+"(${PtType})","${FullAdd}<br>"+"${City}<br>"+"${ZipCode}<br>"+"Parcel#:${ParcelID}")
+      //infoTemplate: new InfoTemplate("Address Info "+"(${PtType})","${FullAdd}<br>"+"${City}<br>"+"${ZipCode}<br>"+"Parcel#:${ParcelID}")
+      infoTemplate: new InfoTemplate("Address Info "+"(${PtType})","${FullAdd}<br>"+"${City}<br>"+"${ZipCode}<br>"+"<a target='_blank' href='https://slco.org/assessor/new/valuationInfoExpanded.cfm?parcel_id=${ParcelID}&nbhd=783&PA=1'>${ParcelID}</a>")
+
+      //<a target='_blank' href="https://slco.org/assessor/new/valuationInfoExpanded.cfm?parcel_id="+${ParcelID}+"&nbhd=783&PA=1">${ParcelID}"</a>
       //infoTemplate: new InfoTemplate("Address Info","${FullAdd}")
     });
     //addPts.setInfoTemplates({0: {infoTemplate:addTemplate}});
