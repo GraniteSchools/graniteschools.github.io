@@ -422,7 +422,7 @@ BS_Sr.setInfoTemplates({0: {infoTemplate: busTemplate}});
       //infoTemplate: addTemplate,
       outFields: ["*"],
       //infoTemplate: new InfoTemplate("Address Info","<b>${Full Address}</b><br>"+"<b>${CITY}</b><br>"+"<b>${Zip Code}</b><br>")
-      infoTemplate: new InfoTemplate("Address Info","${Full Address}")
+      infoTemplate: new InfoTemplate("Address Info","${Street Name}")
     });
     //addPts.setInfoTemplates({0: {infoTemplate:addTemplate}});
     //addPts.setInfoTemplate(addTemplate);
