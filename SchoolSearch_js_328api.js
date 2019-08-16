@@ -423,7 +423,7 @@ BS_Sr.setInfoTemplates({0: {infoTemplate: busTemplate}});
       //infoTemplate: addTemplate,
       outFields: ["*"],
       //infoTemplate: new InfoTemplate("Address Info "+"(${PtType})","${FullAdd}<br>"+"${City}<br>"+"${ZipCode}<br>"+"Parcel#:${ParcelID}")
-      infoTemplate: new InfoTemplate("Address Info "+"(${PtType})","${FullAdd}<br>"+"${City}<br>"+"${ZipCode}<br>"+"<a target='_blank' href='https://slco.org/assessor/new/valuationInfoExpanded.cfm?parcel_id=${ParcelID}&nbhd=783&PA=1'>${ParcelID}</a>")
+      infoTemplate: new InfoTemplate("Address Info "+"(${PtType})","${FullAdd}<br>"+"${City}<br>"+"${ZipCode}<br>"+"Parcel: <a target='_blank' href='https://slco.org/assessor/new/valuationInfoExpanded.cfm?parcel_id=${ParcelID}&nbhd=783&PA=1'>${ParcelID}</a>")
 
       //<a target='_blank' href="https://slco.org/assessor/new/valuationInfoExpanded.cfm?parcel_id="+${ParcelID}+"&nbhd=783&PA=1">${ParcelID}"</a>
       //infoTemplate: new InfoTemplate("Address Info","${FullAdd}")
