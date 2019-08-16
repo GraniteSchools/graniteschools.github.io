@@ -337,14 +337,11 @@ busTemplate.setContent("<b>School:</b>  ${SCHOOL_NAM}<br>" +
     template.setContent("<b>${ADDRESS}</b><br>"+"<b>${CITY}</b><br>"+"<a target='_blank' href=${HTTP}>School Website</a>")
     template.setContent("<b>${ADDRESS}</b>")
 
-    var addTemplate = new InfoTemplate();
-    addTemplate.setTitle("<b>${Point Type}</b>");
+    //var addTemplate = new InfoTemplate();
+    //addTemplate.setTitle("<b>${Point Type}</b>");
     //addTemplate.setContent("<b>${Full Address}</b><br>"+"<b>${CITY}</b><br>"+"<b>${Zip Code}</b><br>")
-    addTemplate.setContent("<b>${Full Address}</b>")
+    //addTemplate.setContent("<b>${Full Address}</b>")
 
-
-//https://slco.org/assessor/new/javaapi2/parcel.cfm?parcel=15332270220000
-//https://slco.org/assessor/new/valuationInfoExpanded.cfm?parcel_id=15332260100000&nbhd=783&PA=1
 //dojo.connect(map, 'onLoad', function(map){initToolbar(map);});
 //  }, dom.byId("measurementDiv"));
 var locateButton = new LocateButton({
@@ -361,18 +358,6 @@ locateButton.startup();
         map: map
     }, "HomeButton");
     homeButton.startup();
-
-
-
-
-
-
-
-
-
-
-
-
 
     //var y = Elementary Old varibles
     //var b  = Jr. High
@@ -403,13 +388,12 @@ locateButton.startup();
     });
 
     //Bus Stops
-//var BS_El = new AGDMSL("https://arcgis1.graniteschools.org/server/rest/services/BusStopsElem/MapServer", {visible:false});
-var BS_El = new AGDMSL("http://www2.graniteschools.org/enterprise/rest/services/BusStopsElem/MapServer");
-var BS_Jr = new AGDMSL("http://www2.graniteschools.org/enterprise/rest/services/BusStopsJr/MapServer", {visible:false});
-var BS_Sr = new AGDMSL("http://www2.graniteschools.org/enterprise/rest/services/BusStopsSr/MapServer", {visible:false});
-BS_El.setInfoTemplates({0: {infoTemplate: busTemplate}});
-BS_Jr.setInfoTemplates({0: {infoTemplate: busTemplate}});
-BS_Sr.setInfoTemplates({0: {infoTemplate: busTemplate}});
+    var BS_El = new AGDMSL("http://www2.graniteschools.org/enterprise/rest/services/BusStopsElem/MapServer");
+    var BS_Jr = new AGDMSL("http://www2.graniteschools.org/enterprise/rest/services/BusStopsJr/MapServer", {visible:false});
+    var BS_Sr = new AGDMSL("http://www2.graniteschools.org/enterprise/rest/services/BusStopsSr/MapServer", {visible:false});
+    BS_El.setInfoTemplates({0: {infoTemplate: busTemplate}});
+    BS_Jr.setInfoTemplates({0: {infoTemplate: busTemplate}});
+    BS_Sr.setInfoTemplates({0: {infoTemplate: busTemplate}});
 
     //Zip GeocodeServer
     var zip5 = new AGDMSL("http://www2.graniteschools.org/enterprise/rest/services/ZipCodes/MapServer", {
@@ -420,17 +404,9 @@ BS_Sr.setInfoTemplates({0: {infoTemplate: busTemplate}});
     //Address points
     var addPts = new FeatureLayer('https://services1.arcgis.com/99lidPhWCzftIe9K/arcgis/rest/services/UtahAddressPoints/FeatureServer/0',{minScale:2000,
       mode: FeatureLayer.MODE_ONDEMAND,
-      //infoTemplate: addTemplate,
       outFields: ["*"],
-      //infoTemplate: new InfoTemplate("Address Info "+"(${PtType})","${FullAdd}<br>"+"${City}<br>"+"${ZipCode}<br>"+"Parcel#:${ParcelID}")
       infoTemplate: new InfoTemplate("Address Info "+"(${PtType})","${FullAdd}<br>"+"${City}<br>"+"${ZipCode}<br>"+"Parcel: <a target='_blank' href='https://slco.org/assessor/new/valuationInfoExpanded.cfm?parcel_id=${ParcelID}&nbhd=783&PA=1'>${ParcelID}</a>")
-
-      //<a target='_blank' href="https://slco.org/assessor/new/valuationInfoExpanded.cfm?parcel_id="+${ParcelID}+"&nbhd=783&PA=1">${ParcelID}"</a>
-      //infoTemplate: new InfoTemplate("Address Info","${FullAdd}")
     });
-    //addPts.setInfoTemplates({0: {infoTemplate:addTemplate}});
-    //addPts.setInfoTemplate(addTemplate);
-
 
     //Add AGRC basemaps pacakge
 		terLyr = new  WebTiledLayer('https://discover.agrc.utah.gov/login/path/fuel-cola-scoop-canyon/tiles/terrain_basemap/${level}/${col}/${row}',{maxScale: 8001});
@@ -459,8 +435,6 @@ BS_Sr.setInfoTemplates({0: {infoTemplate: busTemplate}});
     });
 
     //Query Tasks
-    //Zip
-    //zipQueryTask = new QueryTask("https://services1.arcgis.com/99lidPhWCzftIe9K/arcgis/rest/services/UtahZipCodeAreas/FeatureServer");
     //Precinct District
     prQueryTask = new QueryTask("http://www2.graniteschools.org/enterprise/rest/services/PrecinctAndDistrcit/MapServer/0");
     sdQueryTask = new QueryTask("http://www2.graniteschools.org/enterprise/rest/services/PrecinctAndDistrcit/MapServer/1");
