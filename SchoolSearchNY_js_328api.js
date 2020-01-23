@@ -9,7 +9,6 @@ require([
           "esri/dijit/InfoWindow",
 
           "esri/dijit/HomeButton",
-          "esri/dijit/LocateButton",
           "esri/dijit/Measurement",
 
           "esri/layers/VectorTileLayer",
@@ -42,7 +41,7 @@ require([
           "dijit/layout/ContentPane",
           "dijit/TitlePane",
           "dojo/domReady!"],
-          function(map,Extent,ImageParameters,InfoTemplate,InfoWindow,HomeButton,LocateButton,Measurement,VectorTileLayer,WebTiledLayer,AGDMSL,FeatureLayer, i, QueryTask, Query, u, graphic, Font,Color,TextSymbol, c, h, p, parser,on, dojo, dom)
+          function(map,Extent,ImageParameters,InfoTemplate,InfoWindow,HomeButton,Measurement,VectorTileLayer,WebTiledLayer,AGDMSL,FeatureLayer, i, QueryTask, Query, u, graphic, Font,Color,TextSymbol, c, h, p, parser,on, dojo, dom)
 
     {
     parser.parse();
@@ -344,10 +343,10 @@ imageParameters.format = "png32"
 
 //dojo.connect(map, 'onLoad', function(map){initToolbar(map);});
 //  }, dom.byId("measurementDiv"));
-var locateButton = new LocateButton({
-    map: map
-}, "LocateButton");
-locateButton.startup();
+// var locateButton = new LocateButton({
+//     map: map
+// }, "LocateButton");
+// locateButton.startup();
 
     var measurement = new Measurement({
       map: map
