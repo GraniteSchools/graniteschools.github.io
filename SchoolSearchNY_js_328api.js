@@ -54,7 +54,7 @@ require([
       SrPoly.setVisibility(false);
       // BS_Sr.setVisibility(false)
 
-        k()
+        //k()
     }
 
     function N() {
