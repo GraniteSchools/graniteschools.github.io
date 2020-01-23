@@ -429,7 +429,7 @@ locateButton.startup();
    dom.byId("elButton").on("click", T);
    dom.byId("jrButton").on("click", N);
    dom.byId("srButton").on("click", C);
-   dom.byId("busButton").on("click", L);
+   //dom.byId("busButton").on("click", L);
    dom.byId("addressForm").on("keyup", function(e){
         if (e.keyCode == 13) {
             A();
