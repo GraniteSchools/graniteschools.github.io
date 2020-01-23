@@ -441,9 +441,9 @@ imageParameters.format = "png32"
     sdQueryTask = new QueryTask("http://www2.graniteschools.org/enterprise/rest/services/PrecinctAndDistrcit/MapServer/1");
 
     //Boundary
-    elQueryTask = new QueryTask("http://www2.graniteschools.org/enterprise/rest/services/SchoolBoundaries__19_20/FeatureServer/0");
-    jrQueryTask = new QueryTask("http://www2.graniteschools.org/enterprise/rest/services/SchoolBoundaries__19_20/FeatureServer/1");
-    srQueryTask = new QueryTask("http://www2.graniteschools.org/enterprise/rest/services/SchoolBoundaries__19_20/FeatureServer/2");
+    elQueryTask = new QueryTask("http://www2.graniteschools.org/enterprise/rest/services/AllBoundaries_20_21/FeatureServer/0");
+    jrQueryTask = new QueryTask("http://www2.graniteschools.org/enterprise/rest/services/AllBoundaries_20_21/FeatureServer/1");
+    srQueryTask = new QueryTask("http://www2.graniteschools.org/enterprise/rest/services/AllBoundaries_20_21/FeatureServer/2");
 
     //Bussing Elegibility
     // ebQueryTask = new QueryTask("http://www2.graniteschools.org/enterprise/rest/services/All_BusElig/FeatureServer/0");
