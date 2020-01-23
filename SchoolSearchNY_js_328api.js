@@ -366,7 +366,7 @@ imageParameters.format = "png32"
     var ElPoly =    new AGDMSL("http://www2.graniteschools.org/enterprise/rest/services/Elem_NY/MapServer",{"imageParameters" : imageParameters});
         ElPoly.setInfoTemplates({0: {infoTemplate:template}});
 
-    var JrPoly =    new AGDMSL("http://www2.graniteschools.org/enterprise/rest/services/JrBounds/MapServer",{"imageParameters" : imageParameters,"visible": false});
+    var JrPoly =    new AGDMSL("http://www2.graniteschools.org/enterprise/rest/services/JR_NY/MapServer",{"imageParameters" : imageParameters,"visible": false});
         JrPoly.setInfoTemplates({0: {infoTemplate:template}});
 
     var SrPoly =    new AGDMSL("http://www2.graniteschools.org/enterprise/rest/services/SrBounds/MapServer",{"imageParameters" : imageParameters,"visible": false});
