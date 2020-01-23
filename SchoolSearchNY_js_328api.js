@@ -271,33 +271,33 @@ require([
         })
     }
 
-    function H(e) {
-        query = new Query();
-        query.geometry = e;
-        ebQueryTask.execute(query, function(e) {
-            if (e.features[0]) {
-                dojo.byId("elBusResults").innerHTML = "<strong>Busing: </strong><font color=#00CC33>Eligible"
-            } else {
-                dojo.byId("elBusResults").innerHTML = "<strong>Busing: </strong><font color=red>Ineligible</br>"
-            }
-        });
-        jbQueryTask.execute(query, function(e) {
-            if (e.features[0]) {
-                dojo.byId("jrBusResults").innerHTML = "<strong>Busing: </strong><font color=#00CC33>Eligible"
-            } else {
-                dojo.byId("jrBusResults").innerHTML = "<strong>Busing: </strong><font color=red>Ineligible</br>"
-            }
-        });
-        sbQueryTask.execute(query, function(e) {
-            if (e.features[0]) {
-                dojo.byId("srBusResults").innerHTML = "<strong>Busing: </strong><font color=#00CC33>Eligible";
-                dojo.byId("srBusResults").innerHTML += "</br></br>For additional questions regarding busing, please call (385) 646-4280."
-            } else {
-                dojo.byId("srBusResults").innerHTML = "<strong>Busing: </strong><font color=red>Ineligible";
-                dojo.byId("srBusResults").innerHTML += "</br></br>For additional questions regarding busing, please call (385) 646-4280."
-            }
-        })
-    }
+    // function H(e) {
+    //     query = new Query();
+    //     query.geometry = e;
+    //     ebQueryTask.execute(query, function(e) {
+    //         if (e.features[0]) {
+    //             dojo.byId("elBusResults").innerHTML = "<strong>Busing: </strong><font color=#00CC33>Eligible"
+    //         } else {
+    //             dojo.byId("elBusResults").innerHTML = "<strong>Busing: </strong><font color=red>Ineligible</br>"
+    //         }
+    //     });
+    //     jbQueryTask.execute(query, function(e) {
+    //         if (e.features[0]) {
+    //             dojo.byId("jrBusResults").innerHTML = "<strong>Busing: </strong><font color=#00CC33>Eligible"
+    //         } else {
+    //             dojo.byId("jrBusResults").innerHTML = "<strong>Busing: </strong><font color=red>Ineligible</br>"
+    //         }
+    //     });
+    //     sbQueryTask.execute(query, function(e) {
+    //         if (e.features[0]) {
+    //             dojo.byId("srBusResults").innerHTML = "<strong>Busing: </strong><font color=#00CC33>Eligible";
+    //             dojo.byId("srBusResults").innerHTML += "</br></br>For additional questions regarding busing, please call (385) 646-4280."
+    //         } else {
+    //             dojo.byId("srBusResults").innerHTML = "<strong>Busing: </strong><font color=red>Ineligible";
+    //             dojo.byId("srBusResults").innerHTML += "</br></br>For additional questions regarding busing, please call (385) 646-4280."
+    //         }
+    //     })
+    // }
 
 
     map = new esri.Map("map", {
