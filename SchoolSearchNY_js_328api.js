@@ -66,7 +66,7 @@ require([
       // BS_Sr.setVisibility(false)
 
 
-        k()
+        //k()
     }
 
     function C() {
