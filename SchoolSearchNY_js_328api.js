@@ -204,8 +204,8 @@ require([
         elQueryTask.execute(query, function(t) {
             if (t.features[0]) {
                 D(e);
-                P(e);
-                H(e)
+                P(e)
+                //H(e)
             } else {
                 _(e)
             }
