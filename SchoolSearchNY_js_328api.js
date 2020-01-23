@@ -363,7 +363,7 @@ imageParameters.format = "png32"
     //var w = Sr. High
 
     //Elementary Package
-    var ElPoly =    new AGDMSL("http://www2.graniteschools.org/enterprise/rest/services/ElemBounds/MapServer",{"imageParameters" : imageParameters});
+    var ElPoly =    new AGDMSL("http://www2.graniteschools.org/enterprise/rest/services/Elem_NY/MapServer",{"imageParameters" : imageParameters});
         ElPoly.setInfoTemplates({0: {infoTemplate:template}});
 
     var JrPoly =    new AGDMSL("http://www2.graniteschools.org/enterprise/rest/services/JrBounds/MapServer",{"imageParameters" : imageParameters,"visible": false});
