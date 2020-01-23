@@ -48,22 +48,22 @@ require([
     parser.parse();
     function T() {
       ElPoly.setVisibility(true);
-      BS_El.setVisibility(true);
+      // BS_El.setVisibility(true);
       JrPoly.setVisibility(false);
-      BS_Jr.setVisibility(false);
+      // BS_Jr.setVisibility(false);
       SrPoly.setVisibility(false);
-      BS_Sr.setVisibility(false)
+      // BS_Sr.setVisibility(false)
 
         k()
     }
 
     function N() {
       ElPoly.setVisibility(false);
-      BS_El.setVisibility(false);
+      // BS_El.setVisibility(false);
       JrPoly.setVisibility(true);
-      BS_Jr.setVisibility(true);
+      // BS_Jr.setVisibility(true);
       SrPoly.setVisibility(false);
-      BS_Sr.setVisibility(false)
+      // BS_Sr.setVisibility(false)
 
 
         k()
@@ -71,59 +71,59 @@ require([
 
     function C() {
       ElPoly.setVisibility(false);
-      BS_El.setVisibility(false);
+      // BS_El.setVisibility(false);
       JrPoly.setVisibility(false);
-      BS_Jr.setVisibility(false);
+      // BS_Jr.setVisibility(false);
       SrPoly.setVisibility(true);
-      BS_Sr.setVisibility(true)
+      // BS_Sr.setVisibility(true)
 
 
-        k()
+        //k()
     }
 
-    function k() {
-        if (dojo.byId("busButton").checked) {
-            if (ElPoly.visible === true) {
-                busElem.setVisibility(true);
-                busJr.setVisibility(false);
-                busSr.setVisibility(false)
-            } else if (JrPoly.visible === true) {
-                busElem.setVisibility(false);
-                busJr.setVisibility(true);
-                busSr.setVisibility(false)
-            } else if (SrPoly.visible === true) {
-                busElem.setVisibility(false);
-                busJr.setVisibility(false);
-                busSr.setVisibility(true)
-            }
-        } else {
-            busElem.setVisibility(false);
-            busJr.setVisibility(false);
-            busSr.setVisibility(false)
-        }
-    }
+    // function k() {
+    //     if (dojo.byId("busButton").checked) {
+    //         if (ElPoly.visible === true) {
+    //             busElem.setVisibility(true);
+    //             busJr.setVisibility(false);
+    //             busSr.setVisibility(false)
+    //         } else if (JrPoly.visible === true) {
+    //             busElem.setVisibility(false);
+    //             busJr.setVisibility(true);
+    //             busSr.setVisibility(false)
+    //         } else if (SrPoly.visible === true) {
+    //             busElem.setVisibility(false);
+    //             busJr.setVisibility(false);
+    //             busSr.setVisibility(true)
+    //         }
+    //     } else {
+    //         busElem.setVisibility(false);
+    //         busJr.setVisibility(false);
+    //         busSr.setVisibility(false)
+    //     }
+    // }
 
-    function L() {
-        if (dojo.byId("busButton").checked) {
-            busElem.setVisibility(false);
-            busJr.setVisibility(false);
-            busSr.setVisibility(false)
-        } else {
-            if (ElPoly.visible === true) {
-                busElem.setVisibility(true);
-                busJr.setVisibility(false);
-                busSr.setVisibility(false)
-            } else if (JrPoly.visible === true) {
-                busElem.setVisibility(false);
-                busJr.setVisibility(true);
-                busSr.setVisibility(false)
-            } else if (SrPoly.visible === true) {
-                busElem.setVisibility(false);
-                busJr.setVisibility(false);
-                busSr.setVisibility(true)
-            }
-        }
-    }
+    // function L() {
+    //     if (dojo.byId("busButton").checked) {
+    //         busElem.setVisibility(false);
+    //         busJr.setVisibility(false);
+    //         busSr.setVisibility(false)
+    //     } else {
+    //         if (ElPoly.visible === true) {
+    //             busElem.setVisibility(true);
+    //             busJr.setVisibility(false);
+    //             busSr.setVisibility(false)
+    //         } else if (JrPoly.visible === true) {
+    //             busElem.setVisibility(false);
+    //             busJr.setVisibility(true);
+    //             busSr.setVisibility(false)
+    //         } else if (SrPoly.visible === true) {
+    //             busElem.setVisibility(false);
+    //             busJr.setVisibility(false);
+    //             busSr.setVisibility(true)
+    //         }
+    //     }
+    // }
 
     function A() {
         map.graphics.clear();
@@ -131,9 +131,9 @@ require([
         dojo.byId("elResults").innerHTML = "<br/><center><img src='images/circleThick.gif'></center><br/>";
         dojo.byId("jrResults").innerHTML = "";
         dojo.byId("srResults").innerHTML = "";
-        dojo.byId("elBusResults").innerHTML = "";
-        dojo.byId("jrBusResults").innerHTML = "";
-        dojo.byId("srBusResults").innerHTML = "";
+        // dojo.byId("elBusResults").innerHTML = "";
+        // dojo.byId("jrBusResults").innerHTML = "";
+        // dojo.byId("srBusResults").innerHTML = "";
         if (dojo.byId("address").value) {
             var e = {
                 Street: dojo.byId("address").value,
@@ -323,14 +323,14 @@ require([
 var imageParameters = new ImageParameters();
 imageParameters.format = "png32"
 
-var busTemplate = new InfoTemplate();
-busTemplate.setTitle("<b>#${BUS_NUM}</b>");
-busTemplate.setContent("<b>School:</b>  ${SCHOOL_NAM}<br>" +
-                    "<b>Bus Number:</b>  ${BUS_NUM}<br>" +
-                    "<b>Address:</b>  ${ADDRESS}<br>" +
-                    "<b>Pickup Time:</b>  ${PICKUP}<br>" +
-                    "<b>Route ID:</b>  ${ROUTE_ID}<br>" +
-                    "<b>Stop #:</b>  ${STOP_NUM}");
+// var busTemplate = new InfoTemplate();
+// busTemplate.setTitle("<b>#${BUS_NUM}</b>");
+// busTemplate.setContent("<b>School:</b>  ${SCHOOL_NAM}<br>" +
+//                     "<b>Bus Number:</b>  ${BUS_NUM}<br>" +
+//                     "<b>Address:</b>  ${ADDRESS}<br>" +
+//                     "<b>Pickup Time:</b>  ${PICKUP}<br>" +
+//                     "<b>Route ID:</b>  ${ROUTE_ID}<br>" +
+//                     "<b>Stop #:</b>  ${STOP_NUM}");
 
     var template = new InfoTemplate();
     template.setTitle("<b>${NAME}</b>");
@@ -374,26 +374,26 @@ locateButton.startup();
         SrPoly.setInfoTemplates({0: {infoTemplate:template}});
 
     //Bus Services
-    var busElem = new AGDMSL("http://www2.graniteschools.org/enterprise/rest/services/BusEligElem/MapServer", {
-        visible: false,
-        opacity: .5
-    });
-    var busJr = new AGDMSL("http://www2.graniteschools.org/enterprise/rest/services/BusEligJr/MapServer", {
-        visible: false,
-        opacity: .5
-    });
-    var busSr = new AGDMSL("http://www2.graniteschools.org/enterprise/rest/services/BusEligSr/MapServer", {
-        visible: false,
-        opacity: .5
-    });
-
-    //Bus Stops
-    var BS_El = new AGDMSL("http://www2.graniteschools.org/enterprise/rest/services/BusStopsElem/MapServer");
-    var BS_Jr = new AGDMSL("http://www2.graniteschools.org/enterprise/rest/services/BusStopsJr/MapServer", {visible:false});
-    var BS_Sr = new AGDMSL("http://www2.graniteschools.org/enterprise/rest/services/BusStopsSr/MapServer", {visible:false});
-    BS_El.setInfoTemplates({0: {infoTemplate: busTemplate}});
-    BS_Jr.setInfoTemplates({0: {infoTemplate: busTemplate}});
-    BS_Sr.setInfoTemplates({0: {infoTemplate: busTemplate}});
+    // var busElem = new AGDMSL("http://www2.graniteschools.org/enterprise/rest/services/BusEligElem/MapServer", {
+    //     visible: false,
+    //     opacity: .5
+    // });
+    // var busJr = new AGDMSL("http://www2.graniteschools.org/enterprise/rest/services/BusEligJr/MapServer", {
+    //     visible: false,
+    //     opacity: .5
+    // });
+    // var busSr = new AGDMSL("http://www2.graniteschools.org/enterprise/rest/services/BusEligSr/MapServer", {
+    //     visible: false,
+    //     opacity: .5
+    // });
+    //
+    // //Bus Stops
+    // var BS_El = new AGDMSL("http://www2.graniteschools.org/enterprise/rest/services/BusStopsElem/MapServer");
+    // var BS_Jr = new AGDMSL("http://www2.graniteschools.org/enterprise/rest/services/BusStopsJr/MapServer", {visible:false});
+    // var BS_Sr = new AGDMSL("http://www2.graniteschools.org/enterprise/rest/services/BusStopsSr/MapServer", {visible:false});
+    // BS_El.setInfoTemplates({0: {infoTemplate: busTemplate}});
+    // BS_Jr.setInfoTemplates({0: {infoTemplate: busTemplate}});
+    // BS_Sr.setInfoTemplates({0: {infoTemplate: busTemplate}});
 
     //Zip GeocodeServer
     var zip5 = new AGDMSL("http://www2.graniteschools.org/enterprise/rest/services/ZipCodes/MapServer", {
@@ -415,7 +415,9 @@ locateButton.startup();
 		overLyr = new WebTiledLayer('https://discover.agrc.utah.gov/login/path/fuel-cola-scoop-canyon/tiles/overlay_basemap/${level}/${col}/${row}',{minScale: 8000});
 		map.addLayers([terLyr,imgLyr,overLyr]);
 
-    map.addLayers([ElPoly,JrPoly,SrPoly,BS_El,BS_Jr,BS_Sr,busElem,busJr,busSr,zip5,addPts]);
+    //map.addLayers([ElPoly,JrPoly,SrPoly,BS_El,BS_Jr,BS_Sr,busElem,busJr,busSr,zip5,addPts]);
+    map.addLayers([ElPoly,JrPoly,SrPoly,zip5,addPts]);
+
 
     map.infoWindow.resize(250,75);
     //addPts.hide();
@@ -445,9 +447,9 @@ locateButton.startup();
     srQueryTask = new QueryTask("http://www2.graniteschools.org/enterprise/rest/services/SchoolBoundaries__19_20/FeatureServer/2");
 
     //Bussing Elegibility
-    ebQueryTask = new QueryTask("http://www2.graniteschools.org/enterprise/rest/services/All_BusElig/FeatureServer/0");
-    jbQueryTask = new QueryTask("http://www2.graniteschools.org/enterprise/rest/services/All_BusElig/FeatureServer/1");
-    sbQueryTask = new QueryTask("http://www2.graniteschools.org/enterprise/rest/services/All_BusElig/FeatureServer/2")
+    // ebQueryTask = new QueryTask("http://www2.graniteschools.org/enterprise/rest/services/All_BusElig/FeatureServer/0");
+    // jbQueryTask = new QueryTask("http://www2.graniteschools.org/enterprise/rest/services/All_BusElig/FeatureServer/1");
+    // sbQueryTask = new QueryTask("http://www2.graniteschools.org/enterprise/rest/services/All_BusElig/FeatureServer/2")
 
 
 
